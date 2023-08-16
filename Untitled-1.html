@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/Untitled-1.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="explain-box">
+    <h4>How we design our shoes</h4>
+    <p class="pseudo">
+      수도 엘리멘트는 내부의 어떤 부분의 스타일을 수정하고 싶을때
+      수도 클래스는 어떤 상태일때 스타일을 수정하고 싶을때
+      ::after 내부 맨 뒤에 뭔가 추가할때
+      ::before 내부 맨 앞에 뭔가 추가할때
+      float쓰고 clear 써야하는데 만들기 귀찮을때
+      수도 엘리멘트 ::after 추가해서 content 텅 빈걸로 주고 display block 주고 clear both 주고
+      float none 주면 됨
+    </p>
+    <input type="file" class="input-file">
+    <input placeholder="안녕하세요">
+    <input type="range">
+    <progress value="0.5"></progress>
+  </div>
+
+  <style>
+    input[type=file]::-webkit-file-upload-button{
+      background-color: red;
+      border: 0px;
+    }
+
+    input::-webkit-input-placeholder{
+      background-color: blue;
+    }
+
+    input[type=range]{
+      appearance: none;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track{
+      appearance: none;
+      background-color: red;
+      width: 20px;
+      height: 20px;
+    }
+
+    progress{
+      appearance: none;
+    }
+
+    progress::-webkit-progress-bar{
+      appearance: none;
+      background-color: aqua;
+      
+    }
+
+    progress::-webkit-progress-value{
+      background: linear-gradient(.25turn, aqua, red);
+      border-radius: 10px;
+    }
+
+  </style>
+
+</body>
+</html>
